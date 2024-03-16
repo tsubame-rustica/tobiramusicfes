@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>出演者情報 編集</title>
+    </head>
+    <body>
+	
+        <h2>投稿フォーム</h2>
+    
+
+        <form>
+            <label>アーティスト名 ※必須</label>
+            <br />
+            <input type="text" name="title_def" placeholder="アーティスト名" required="true">
+            <br />
+            <label>サムネイルを選択</label>
+            <br />
+            <input type="file" name="thumbnail" accept="image/png, image/jpeg">
+            <br />
+            <input type="text" name="text" id="copy" hidden>
+            <br />
+        </form>
+        <div id="editor" name="text" onkeyup="save()" onclick="save()" style="height : 750px; border : solid; width : 800px;"></div>
+        <br />
+        <input type="button" id="sendBtn" value="送信する">
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/quote@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/code@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/image@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/link@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/underline@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/simple-image@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/editorjs-text-color-plugin@2.0.4/dist/bundle.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/editorjs-undo"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/simple-image@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/editorjs-style@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/editorjs-inline-font-size-tool@1.0.1/dist/bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/code@2.0.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/table@2.2.2/dist/table.min.js"></script>
+        <script src="https://tsubame-rustica.com/js/jquery-3.7.1.min.js"></script>
+        <script>
+    
+            //editor.jsの設定
+    
+            const editor = new EditorJS({
+    
+            holder: 'editor',
+                tools: {
+                    header      : Header,        
+                    list        : List,
+                    underlie    : Underline,
+                    color       : ColorPlugin,
+                        image		: SimpleImage,
+                    style		: EditorJSStyle.StyleInlineTool,
+                    fontSize	: FontSizeTool,
+                    code        : CodeTool,
+                    embed: {
+                        class: Embed,
+                        config: {
+                        services: {
+                            youtube: true,
+                            coub: true
+                        }
+                        }
+                    },
+                    table       : Table
+                    }
+            });
+    
+            function save(){
+                var input = document.getElementById("copy");
+                var target = document.getElementsByClassName("ce-block__content");
+                var div = '';
+                for (var i = 0; i < target.length; i++){
+                    div += target[i].outerHTML;  
+                }
+                input.value = div;
+            }
+
+            $('#sendBtn').on("click", function () {
+                let $form = $('form');
+                let fd = new FormData($form.get(0));
+                $.ajax({
+                    url:'file_save.php',
+                    type:'post',
+                    data: fd,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                }).done(function (data) {
+                    alert("正常に送信されました");
+                    window.location.assign('https://tsubame-rustica.conohawing.com/tmf/2024/');
+                }).fail(function() {
+                    alert("送信に失敗しました");
+                });
+            })
+        </script>
+    
+    </body>
+</html>
