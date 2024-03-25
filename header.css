@@ -3,6 +3,9 @@
     src: url("./fonts/Ronde-B_square.otf") format("opentype");
 }
 
+html {
+    
+}
 
 .video {
     width: 75%;
@@ -31,23 +34,9 @@ p {
 
 body {
     font-family: "rond-B", sans-serif;
-    width: 100vw;
-    overflow-x: hidden;
-}
-
-.title {
-    display: block;
-    position: absolute;
-    width: 11em;
-    height: 1.25em;
-    top: 4.5em;
-    left: 20vw;
-    font-size: calc((60vw / 11));
-    color: #fff;
-    animation: typing 2s steps(11), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid; 
+    width: 100%;
+    /* overflow-x: hidden; */
+    background-color: #262626; 
 }
 
 
@@ -63,37 +52,83 @@ body {
     }
   }
 
+.space {
+    width: 100%;
+    height: 100vh;
+}
+
+.introduction {
+    width: 100%;
+}
+
+.introduction h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    margin: 0;
+}
+
 @media (min-width: 821px)  {
     header {
         display: inline-flex;
         position: fixed;
         top: 0;
-        width: 100%;
+        width: 98%;
         padding: 1vw;
         z-index: 1000;
+        background-color: rgba(0,0,0,0.80);
     }
     
     header .logo-outer {
         position: relative;
-        width: 10vw;
-        background-color: rgb(255, 182, 182);
+        width: 35vw;
+        /* background-color: rgb(145, 145, 145); */
     }
 
-    header .logo-inner {
-        position: absolute;
-        height: 100%;
-        top: -15px;
+    header .logo-outer > a > div {
+        position   : absolute;
+        top        : 0;
+        left       : 0;
+        bottom     : 0;
+        right      : 0;
+        opacity    : 0;
+        background-size: 100%;
+        animation  : switch-bg 15s infinite;
+    }
+
+    .logo-outer .logo1 {
+        background-image : url(./TMFロゴ横4.png);   /* 背景の画像を指定 */
+    }
+    .logo-outer .logo2 {
+        background-image : url(./TMFロゴ横３.png);   /* 背景の画像を指定 */
+        animation-delay  : 5s;
+    }
+    .logo-outer .logo3 {
+        background-image : url(./TMFロゴ横２.png);   /* 背景の画像を指定 */
+        animation-delay  : 10s;
+    }
+      
+    @keyframes switch-bg {
+        0% { opacity: 0; }
+        5% { opacity: 1; }
+        34% { opacity: 1; }
+        40% { opacity: 0; }
+        100% { opacity: 0; }
+    }
+
+    .logo-outer img {
+        width: 100%;
     }
     
     nav {
-        width: 88vw;
+        width: 63vw;
         height: fit-content;
     }
 
     .header {
         display: inline-block;
         position: relative;
-        width: 75%;
+        width: 100%;
         height: inherit;
         padding: 0;
         margin: 0;
@@ -101,7 +136,7 @@ body {
 
     .header a {
         display         : block;
-        padding:0 0.75em 0 1.25em;
+        padding         : 0.25em 0.75em 0.25em 1.25em;
         color           : #fff;
         text-align: left;
         text-decoration: none;
@@ -111,8 +146,8 @@ body {
         display: inline-block;
         position: relative;
         list-style-type: none;
-        margin: 0 0.2em;
-        font-size: 125%;
+        padding: 0.5em 0.2em;
+        font-size: clamp(0.8rem, calc(0.75rem + 0.725vw), 1.75rem);
     }
 
     .header li:hover > a {
@@ -207,74 +242,10 @@ body {
         padding: 0;
     }
 
-    .bg::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        /* overflow: hidden; */
-        z-index: -3;
-        background-color: #000;
-        /* background-image: url("./bg-cut.png"); */
-        background-size: cover;
-        opacity: 0.85;
+    main {
+        margin-top: calc(10vh + 2vw);
     }
-
     
-    .bg .fly-1 {
-        position: fixed;
-        width: 20%;
-        height: 20%;
-        /* background-image: url("./bg-fly.png"); */
-        background-size: 125%;
-        background-position:50% 100%;
-        z-index: -1;
-        top: 10em;
-        animation-name: flying-ship-1;
-        opacity: 0.4;
-        animation-duration: 25s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-    }
-
-    .bg .fly-2 {
-        position: fixed;
-        width: 20%;
-        height: 20%;
-        /* background-image: url("./bg-fly.png"); */
-        background-size: 125%;
-        background-position:50% 100%;
-        z-index: -1;
-        bottom: 10em;
-        transform: scale(-1, 1);
-        animation-name: flying-ship-2;
-        opacity: 0.4;
-        animation-duration: 30s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-    }
-
-    @keyframes flying-ship-1 {
-        0% {
-            left: -20%;
-        }
-        100% {
-            left: 110%;
-        }
-    }
-
-    @keyframes flying-ship-2 {
-        0% {
-            left: 120%;
-        }
-        100% {
-            left: -20%;
-        }
-    }
-
     @keyframes rotate-bg {
         0% {
             transform: rotate(0);
@@ -290,7 +261,7 @@ body {
     header {
         position: fixed;
         background-color: rgba(0,0,0,0.80);
-        width: 100vw;
+        width: 100%;
         height: 10vh;
         top : 0;
         z-index: 1000;
@@ -299,12 +270,26 @@ body {
     .logo-outer {
         width: 20%;
         height: 100%;
-        background-color: rgb(184, 108, 108);
-        color: #fff;
+        /* background-color: rgb(145, 145, 145); */
+        background-image : url(./TMFロゴ.png);
+        background-size: 100%;
     }
 
-    .logo-outer p {
-        margin: 0;
+    header .logo-outer > a > div {
+        position   : absolute;
+        top        : 0;
+        left       : 0;
+        bottom     : 0;
+        right      : 0;
+        opacity    : 0;
+        background-size: 100%;
+    }
+
+    .logo-outer .logo1 {
+        background-image : url(./TMFロゴ.png);   /* 背景の画像を指定 */
+    }
+    .logo-outer .logo2, .logo-outer .logo3 {
+        display: none;
     }
 
     #hamburger-menu {
