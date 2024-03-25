@@ -270,24 +270,15 @@ body {
     .logo-outer {
         width: 20%;
         height: 100%;
-        /* background-color: rgb(145, 145, 145); */
+    }
+
+    .logo-outer .logo1 {
+        width: 100%;
+        height: 100%;
         background-image : url(./TMFロゴ.png);
         background-size: 100%;
     }
 
-    header .logo-outer > a > div {
-        position   : absolute;
-        top        : 0;
-        left       : 0;
-        bottom     : 0;
-        right      : 0;
-        opacity    : 0;
-        background-size: 100%;
-    }
-
-    .logo-outer .logo1 {
-        background-image : url(./TMFロゴ.png);   /* 背景の画像を指定 */
-    }
     .logo-outer .logo2, .logo-outer .logo3 {
         display: none;
     }
@@ -328,7 +319,7 @@ body {
 
     header nav {
         width: 100vw;
-        height: 100vh;
+        /* height: 100vh; */
         overflow: auto;
     }
     .header {
