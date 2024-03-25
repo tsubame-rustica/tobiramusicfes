@@ -28,13 +28,6 @@ p {
     margin: 0;
 }
 
-body {
-    font-family: "rond-B", sans-serif;
-    width: 100%;
-    /* overflow-x: hidden; */
-    background-color: #262626;
-}
-
 .title {
     display: block;
     width: 11em;
@@ -68,13 +61,18 @@ body {
 
 .introduction {
     width: 100%;
+    color: #000;
 }
 
 .introduction h2 {
     text-align: center;
-    color: #fff;
+    color: #000;
     font-size: 2.5em;
     margin: 0;
+}
+
+.introduction p {
+    color: #000;
 }
 
 @media (min-width: 821px)  {
