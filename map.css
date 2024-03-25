@@ -1,0 +1,19 @@
+.map {
+    display: flex;
+    flex-direction: column;
+}
+
+.map h2 {
+    display: flex;
+    justify-content: center;
+    font-size: clamp(3.8rem, calc(3.75rem + 0.725vw), 4.75rem);
+    color: #fff;
+}
+
+.map img {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: auto;
+    margin: 0 20% 10% 20%;
+}
