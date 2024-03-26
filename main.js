@@ -36,3 +36,22 @@ $('.menu-btn').on('click', function() {
         });
     }
 });
+
+$(function(){
+	$(window).scroll(function (){
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+        if (scroll > windowHeight * 0.5) {
+            $('.page-top').addClass('top');
+            $('top').fadeIn();
+            console.log("top");
+        } else {
+            $('.page-top').removeClass('top');
+            $('top').fadeOut();
+        }
+	});
+});
+
+$('.top').on('click', function() {
+    $('html, body').animate({scrollTop: 0}, 1000);
+});
