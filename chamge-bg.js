@@ -6,7 +6,7 @@ $(function(){
 			var scroll = $(window).scrollTop();
 			var windowHeight = $(window).height();
             var window_bottom = scroll + windowHeight
-            if (window_bottom > pos_top && window_bottom < pos_bottom) {
+            if (window_bottom > pos_top) {
                 var scroll_par = (window_bottom - pos_top) / (pos_bottom - pos_top) * 10;
                 var color = 255 * ((scroll_par ** 2) / 100);
                 $('body').css('background-color', 'rgb(' + color + ',' + color + ',' + color + ')');
