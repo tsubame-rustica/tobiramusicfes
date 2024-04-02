@@ -1,11 +1,10 @@
-@font-face {
+/* @font-face {
     font-family: "rond-B";
     src: url("./fonts/Ronde-B_square.otf") format("opentype");
-}
+} */
 
-.video {
-    width: 75%;
-    height: 75%;
+body {
+    font-family: 'noto-sans-jp', sans-serif;
 }
 
 
@@ -34,6 +33,9 @@ body {
     /* overflow-x: hidden; */
 }
 
+.top-title {
+    font-weight: 800;
+}
 
 @keyframes typing {
     from {
@@ -54,6 +56,7 @@ body {
 
 .introduction {
     width: 100%;
+    font-weight: 800;
 }
 
 .introduction h2 {
@@ -266,13 +269,6 @@ body {
 
 
 
-
-.video {
-    width: 75%;
-    height: 75%;
-}
-
-
 .command_key {
     animation-name: logo_command_key;
     animation-duration: 1.5s;
@@ -460,6 +456,7 @@ ul.news {
 .news-info .news-title {
     grid-area: areaB;
     font-size: 2em;
+    font-weight: 600;
 }
 
 .news-info .news-text {
