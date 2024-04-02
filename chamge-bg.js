@@ -13,6 +13,7 @@ $(function(){
                 mirror = 255 - color;
                 $('.introduction h2').css('color', 'rgb(' + mirror + ',' + mirror + ',' + mirror + ')');
                 $('.introduction p').css('color', 'rgb(' + mirror + ',' + mirror + ',' + mirror + ')');
+                $('.scroll').css('color', 'rgb(' + mirror + ',' + mirror + ',' + mirror + ')');
             }
 		});
 	});
