@@ -159,6 +159,10 @@ a {
     text-decoration: none;
 }
 
+p.name {
+    margin: 0.25em 0;
+}
+
 div.artists-info {
     width: 90%;
     margin: 0 5%;
