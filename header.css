@@ -22,8 +22,9 @@
         bottom     : 0;
         right      : 0;
         opacity    : 0;
-        background-size: 100% 100%;
+        background-size: auto 125%;
         background-repeat: no-repeat;
+        background-position: left;
         animation  : switch-bg 15s infinite;
     }
 
