@@ -1,0 +1,49 @@
+.artists {
+    width: 100%;
+    height: calc(100vw * 5 / 3);
+    color: #fff;
+    background-color: #252525;
+}
+
+.artists .heading {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 3em;
+    text-align: center;
+}
+
+.artists .heading .ruby {
+    font-size: 1.5em;
+}
+
+.artists .heading .heading-title {
+    font-size: 3em;
+}
+
+.artists .artists-list {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5em 5%;
+}
+
+.artists .artists-list .artist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin-bottom: 5em;
+}
+
+.artists .artists-list .artist-image {
+   width: 70%;
+   margin: 0 15%;
+}
+
+.artists .artists-list .artist .name {
+    text-align: center;
+    font-size: 2em;
+}
