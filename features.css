@@ -23,11 +23,12 @@
 }
 
 .feature-element .step-index {
+    font-family: 'Oswald';
     position: relative;
     width: 19%;
     height: 100%;
     top: -0.41em;
-    left: -4%;
+    left: -3%;
     font-size: 45vw;
     font-weight: bold;
     text-align: center;

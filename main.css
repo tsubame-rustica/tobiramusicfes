@@ -167,6 +167,69 @@
 
 }
 
+.countdown {
+    width: 100%;
+    height: calc(100vw / 3);
+    color: #fff;
+    background-color: #252525;
+    text-align: center;
+}
+
+.countdown .text {
+    font-size: 2em;
+}
+
+.countdown .time {
+    font-family: 'Oswald';
+    font-size: 2.5em;
+    font-weight: 200;
+}
+
+.countdown .time .day {
+    color: #F288B9;
+}
+
+.countdown .time .hour {
+    color: #8DD3F2;
+}
+
+.countdown .time .min {
+    color: #A9BF45;
+}
+
+.sub-title {
+    width: 100%;
+    height: calc(100vw * 3.5 / 3);
+    background-color: #fff;
+    background-image: url(./pic/bg/green.png);
+    background-size: 100% auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.sub-title .logo {
+    width: 100%;
+}
+
+.sub-title .logo img {
+    width: 60%;
+    margin: 0 20%;
+}
+
+.sub-title .heading {
+    font-size: 3em;
+    letter-spacing: 0.25em;
+    font-weight: 500;
+    margin-bottom: 2.75em;
+}
+
+.sub-title .info {
+    font-size: 1.25em;
+    font-weight: 400;
+    font-family: 'Oswald';
+}
+
 @media (min-width: 821px) {
     .thumb .thumb-text {
         font-size: clamp(1.5rem, calc(1.2rem + 3vw), 3rem);
