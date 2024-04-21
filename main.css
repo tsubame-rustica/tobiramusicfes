@@ -262,7 +262,7 @@
     }
     
     .countdown .time {
-        font-size: clamp(3rem, calc(1.3rem + 6vw), 6rem);
+        font-size: clamp(3rem, calc(1.3rem + 8vw), 8rem);
     }
 
     .thumb .thumb-text {
@@ -274,7 +274,16 @@
     }
 
     .title-top-right .countdown .time {
-        font-size: clamp(4rem, calc(1.3rem + 8vw), 4rem);
+        font-size: clamp(3rem, calc(1.3rem + 8vw), 4rem);
+    }
+
+    .sub-title .heading {
+        font-size: clamp(4rem, calc(1.3rem + 5vw), 6rem);
+        margin-bottom: clamp(10rem, 20vw, 20rem);
+    }
+
+    .sub-title .info {
+        font-size: clamp(1rem, calc(0.7rem + 3vw), 5rem);
     }
 }
 
