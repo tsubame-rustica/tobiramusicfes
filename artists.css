@@ -3,7 +3,6 @@
     height: max-content;
     color: #fff;
     background-color: #252525;
-    padding-bottom: 10px;
 }
 
 .artists .heading {
@@ -13,6 +12,7 @@
     width: 100%;
     padding-top: 3em;
     text-align: center;
+    background-color: #252525;
 }
 
 .artists .heading .ruby {
