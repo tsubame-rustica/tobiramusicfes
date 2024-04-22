@@ -60,7 +60,7 @@ $('.page-top').on('click', function() {
 // 1秒ごとに実行
 const update = () => {
     // 日本時間の timezone 付きで指定
-    const targetTime = new Date('2024-04-25T00:00+09:00').getTime();
+    const targetTime = new Date('2024-05-10T00:00+09:00').getTime();
     const diff = targetTime - Date.now();
     const numbers = [
       Math.floor(diff / 1000 / 60 / 60 / 24),
