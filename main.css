@@ -2,7 +2,7 @@
     display : flex;
     flex-direction  : row;
     width   : 100%;
-    height  : 66vw;
+    aspect-ratio: 16 / 9;
     background-color: #F288B9;
     overflow: hidden;
 }
@@ -61,7 +61,7 @@
     right: 30%;
     text-align: center;
     line-height: 150px;
-    transform: perspective(500px) rotateY(-20deg);
+    transform: perspective(500px) rotateY(-11deg);
     transform-origin: top right;
     background-color    : #8DD3F2;
     border-top-left-radius: 5%;
@@ -96,7 +96,7 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: calc(100vw * 2 / 3);
+    aspect-ratio: 16 / 9;
     background-image: url(./pic/bg/pink.png);
     background-size : 100% auto;
     background-repeat: no-repeat;
@@ -126,7 +126,7 @@
 .how-to-join {
     position: relative;
     width: 100%;
-    height: calc(100vw / 3);
+    aspect-ratio: 16 / 3;
     overflow: hidden;
 }
 
@@ -185,7 +185,7 @@
 
 .countdown {
     width: 100%;
-    height: calc(100vw / 3);
+    aspect-ratio: 16 / 3;
     color: #fff;
     background-color: #050505;
     text-align: center;
@@ -224,7 +224,7 @@
     width: 40%;
     height: max-content;
     right: 0;
-    top: 15%;
+    top: 11vh;
     background-color: #0000;
 }
 
