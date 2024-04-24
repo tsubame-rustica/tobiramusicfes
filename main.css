@@ -2,7 +2,7 @@
     display : flex;
     flex-direction  : row;
     width   : 100%;
-    aspect-ratio: 16 / 9;
+    height: min(calc(100vw * 9 / 16), 100vh);
     background-color: #F288B9;
     overflow: hidden;
 }
@@ -38,7 +38,7 @@
     width: 90%;
     height: max-content;
     margin-left: 10%;
-    margin-bottom: 5vw;
+    margin-bottom: 3vh;
 }
 
 .top-title .title-center {
@@ -54,50 +54,24 @@
     border-top-left-radius: 5%;
 }
 
-.top-title .title-center .door-circle {
+.top-title .title-center .door-circle-parent {
     position: absolute;
-    top: 25vw;
-    width: 3vw;
-    height: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+    height: min(calc(100vw * 9 / 16), 100vh);
+}
+
+.top-title .title-center .door-circle {
+    position: relative;
+    width: 4vw;
+    height: 4vw;
     border-radius: 50%;
     margin-left: 1vw;
     background-color: #F288B9;
     z-index: 1;
 }
-
-/* .top-title .title-center {
-    perspective: 50vw; 
-    width: 25%;
-    height: 100%;
-    display: inline-block; 
-}
-
-.top-title .title-center .door-bg {
-    width: 130%;
-    height: 110%;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative;
-    top : -3%;
-    right: 30%;
-    text-align: center;
-    line-height: 150px;
-    transform: perspective(500px) rotateY(-11deg);
-    transform-origin: top right;
-    background-color    : #8DD3F2;
-    border-top-left-radius: 5%;
-}
-
-.top-title .title-center .door-circle {
-    width: 10%;
-    height: 10%;
-    border-radius: 50%;
-    margin-left: 1em;
-    background-color: #F288B9;
-} */
 
 .top-title .title-right {
     width: 25%;
@@ -112,7 +86,7 @@
 .top-title .title-right .text {
     width: max-content;
     height: max-content;
-    margin-bottom: 5vw;
+    margin-bottom: 10%;
     font-family: 'Oswald';
 }
 
@@ -295,20 +269,12 @@
 }
 
 @media (min-width: 621px) {
-    .top-title {
-        height: 100vh;
-    }
-
     .sub-title .heading {
         margin-bottom: clamp(10rem, 20vw, 35rem);
     }
 }
 
 @media (max-width: 620px) {
-    .top-title {
-        aspect-ratio: 16 / 9;
-    }
-
     .sub-title .heading {
         margin-bottom: clamp(4rem, 20vw, 8rem);
     }
