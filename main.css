@@ -16,6 +16,7 @@
 .top-title h1 {
     letter-spacing: 0.25em;
     font-weight: normal;
+    line-height: 1.8em;
 }
 
 .top-title h2 {
@@ -204,6 +205,7 @@
     margin: 0 0.15em;
     font-weight: 300;
     letter-spacing: normal;
+    line-height: 1em;
 }
 
 .countdown .time .day {
@@ -269,6 +271,7 @@
 }
 
 @media (min-width: 621px) {
+
     .sub-title .heading {
         margin-bottom: clamp(10rem, 20vw, 35rem);
     }
