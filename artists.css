@@ -33,6 +33,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 5%;
+    padding-bottom: 0;
 }
 
 .artists .artists-list .artist {

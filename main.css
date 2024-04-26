@@ -124,7 +124,7 @@
     margin: 0;
 }
 
-.thumb .thumb-text h3:nth-child(3) {
+.tmf_logo {
     color: #0000;
     background-image: url(./pic/word/logo_yoko_bk.png);
     background-size: auto 100%;
@@ -196,7 +196,7 @@
 
 .countdown {
     width: 100%;
-    aspect-ratio: 16 / 3;
+    aspect-ratio: 4 / 1;
     color: #fff;
     background-color: #050505;
     text-align: center;
