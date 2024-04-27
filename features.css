@@ -31,7 +31,6 @@
     left: -3%;
     font-size: 45vw;
     font-weight: bold;
-    text-align: center;
 }
 
 .feature-element:nth-child(1) {
@@ -57,4 +56,35 @@
 
 .feature-element .description .flex {
     width: max-content;
+}
+
+@media (min-width: 681px) {
+
+}
+
+@media (max-width: 680px) {
+    .features * {
+        letter-spacing: 0.05em;
+    }
+
+    .feature-element .step-index {
+        width: 18%;
+        top: 0;
+        left: 0;
+        font-size: 20vw;
+        text-align: center;
+    }    
+
+    .feature-element:nth-child(2) .step-index {
+        text-align: left;
+    }
+
+    .feature-element .description {
+        width: 85%;
+        justify-content: left;
+    }
+
+    .feature-element:nth-child(2) .description {
+        justify-content: center
+    }
 }

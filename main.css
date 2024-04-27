@@ -15,13 +15,14 @@
 
 .top-title h1 {
     letter-spacing: 0.25em;
-    font-weight: normal;
+    font-weight: 600;
     line-height: 1.8em;
 }
 
 .top-title h2 {
     font-weight: 200;
     width : 100%;
+    line-height: 1.15em;
 }
 
 .top-title .title-left {
@@ -36,10 +37,11 @@
 }
 
 .top-title .title-left .text {
-    width: 90%;
+    position: absolute;
+    width: 45%;
     height: max-content;
-    margin-left: 10%;
-    margin-bottom: 3vh;
+    margin-left: 5%;
+    margin-bottom: 5%;
 }
 
 .top-title .title-center {
@@ -78,17 +80,18 @@
     width: 25%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: flex-end;
     text-align: right;
     background-color: #A9BF45;
 }
 
 .top-title .title-right .text {
+    position: absolute;
     width: max-content;
     height: max-content;
-    margin-bottom: 10%;
+    margin-bottom: 5.5%;
     font-family: 'Oswald';
+    right: 8%; 
 }
 
 .thumb {
@@ -104,19 +107,21 @@
 }
 
 .thumb .thumb-img {
+    width: 100%;
     height: 40%;
 }
 
 .thumb .thumb-img img {
-    width: 100%;
+    width: 60%;
     height: 100%;
+    margin: 0 20%;
     object-fit: contain;
 }
 
 .thumb .thumb-text {
     height: 40%;
     text-align: center;
-    margin-bottom: 15em;
+    margin-bottom: 15%;
 }
 
 .thumb .thumb-text h3 {
@@ -127,7 +132,7 @@
 .tmf_logo {
     color: #0000;
     background-image: url(./pic/word/logo_yoko_bk.png);
-    background-size: auto 100%;
+    background-size: auto 80%;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -233,11 +238,19 @@
 
 .title-top-right .countdown {
     position: absolute;
-    width: 40%;
+    width: max-content;
     height: max-content;
-    right: 0;
+    right: 8%;
     top: 11vh;
     background-color: #0000;
+}
+
+.title-top-right .countdown .time {
+    justify-content: right;
+}
+
+.title-top-right .countdown .min {
+    margin-right: 0;
 }
 
 .title-top-right h1 {
@@ -289,6 +302,10 @@
 }
 
 @media (max-width: 620px) {
+    .top-title h1 {
+        line-height: 1.5em;
+    }
+
     .sub-title .heading {
         margin-bottom: clamp(4rem, 20vw, 8rem);
     }
