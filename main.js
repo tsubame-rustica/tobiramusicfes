@@ -1,26 +1,3 @@
-const command_key_list = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "KeyB", "KeyA"];
-command_key_step = 0;
-
-window.addEventListener("keydown", (e)=>{
-    $(".logo-outer").removeClass("command_key");
-    const code  = e.code;
-    if (command_key_list[command_key_step] === code) {
-        command_key_step += 1;
-        console.log(command_key_step)
-        if (command_key_step == 10) {
-            $(".logo-outer").addClass("command_key");
-            console.log("addclass");
-            command_key_step = 0;
-        }
-    } else {
-        console.log(code, command_key_list[command_key_step], command_key_step);
-        command_key_step = 0;
-    }
-    console.log(code);
-});
-
-is_open_hamburger = false;
-
 $('.menu-btn').on('click', function() {
     scrollTop = $(window).scrollTop();
     is_open_hamburger = !is_open_hamburger;
@@ -60,7 +37,7 @@ $('.page-top').on('click', function() {
 // 1秒ごとに実行
 const update = () => {
     // 日本時間の timezone 付きで指定
-    const targetTime = new Date('2024-05-10T00:00+09:00').getTime();
+    const targetTime = new Date('2024-06-22T14:00+09:00').getTime();
     const diff = targetTime - Date.now();
     const numbers = [
       Math.floor(diff / 1000 / 60 / 60 / 24),

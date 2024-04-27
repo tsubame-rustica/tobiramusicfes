@@ -10,6 +10,7 @@ footer {
 footer .footer-top {
     display: flex;
     flex-direction: row;
+    margin-bottom: 10%
 }
 
 footer .footer-top .credit {
@@ -23,6 +24,10 @@ footer h5 {
     margin: 1em 0;
 }
 
+footer h6 a {
+    color: #fff;
+}
+
 footer h6 {
     font-size: clamp(0.15rem, calc(0.1rem + 1vw), 4rem) !important;
 }
@@ -31,11 +36,12 @@ footer .footer-top .right-logo {
     display: flex;
     flex-direction: row;
     width: 30%;
+    gap: 15%;
 }
 
 footer .footer-top .right-logo img {
-    width: 30%;
-    margin: 10%;
+    width: 40%;
+    object-fit: contain;
 }
 
 footer .border {
@@ -50,10 +56,16 @@ footer .footer-logo {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 5vw;
+}
+
+footer .footer-logo a {
+    display: block;
+    width: max-content;
 }
 
 footer .footer-logo img {
-    width: 5%;
+    width: 5vw;
     margin: 0 5%;
 }
 
@@ -68,6 +80,11 @@ p.copy-right {
 }
 
 @media (max-width: 680px) {
+    footer {
+        width: 90%;
+        padding: 5%;
+    }
+
     footer h5 {
         font-size: clamp(0.15rem, calc(0.1rem + 2vw), 6rem);
     }
