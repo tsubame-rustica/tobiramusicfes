@@ -1,8 +1,3 @@
-
-
-
-
-
 .top-title {
     display : flex;
     flex-direction  : row;
@@ -35,6 +30,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    background-image: url(./pic/bg/melody.png);
     background-size: 110%;
     background-repeat: no-repeat;
     background-position: -5vw 33%;
@@ -104,20 +100,21 @@
     justify-content: center;
     width: 100%;
     height: max-content;
+    background-image: url(./pic/bg/pink.png);
     background-size : 100% auto;
     background-repeat: no-repeat;
     background-position: bottom;
 }
 
 .thumb .thumb-img {
-    width: 50%;
-    /* height: 40%; */
-    margin: 10% 25%;
+    width: 100%;
+    height: 40%;
 }
 
 .thumb .thumb-img img {
-    width: 100%;
+    width: 60%;
     height: 100%;
+    margin: 0 20%;
     object-fit: contain;
 }
 
@@ -134,10 +131,35 @@
 
 .tmf_logo {
     color: #0000;
-    background-image: url(./pic/webp/tmf_word.webp);
+    background-image: url(./pic/word/logo_yoko_bk.png);
     background-size: auto 80%;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+
+
+.how-to-join {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 3;
+    overflow: hidden;
+}
+
+.how-to-join .bg {
+    width: 100%;
+    height: 100%;
+    perspective: 60vw; /*--perspective--*/
+}
+
+.how-to-join .bg .plaid-bg {
+    position: relative;
+    left: -150%;
+    width: 400%;
+    height: 500%;
+    background: linear-gradient(0deg, #350951, #e4a1c0);
+    transform: perspective(100000px) rotateX(-60deg);
+    transform-origin: top left;
 }
 
 .plaid-bg .stripe {
@@ -171,6 +193,10 @@
     margin: 10% 20%;
     padding: 0;
 
+}
+
+.how-to-join .jump-page-button button h4 {
+    letter-spacing: 0.1em;
 }
 
 .countdown {
@@ -236,7 +262,7 @@
     width: 100%;
     height: calc(100vw * 3.5 / 3);
     background-color: #fff;
-    background-image: url(./pic/webp/green_bg.webp);
+    background-image: url(./pic/bg/green.png);
     background-size: 100% auto;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -244,14 +270,12 @@
 }
 
 .sub-title .logo {
-    width: 50%;
-    padding: 10% 25%;
+    width: 100%;
 }
 
 .sub-title .logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    width: 60%;
+    margin: 0 20%;
 }
 
 .sub-title .heading h1 {
@@ -260,11 +284,8 @@
 }
 
 .sub-title .info {
+    font-weight: 400;
     font-family: 'Oswald';
-}
-
-.sub-title .info h3 {
-    font-weight : 200;
 }
 
 .black-bg {
@@ -274,13 +295,6 @@
 }
 
 @media (min-width: 621px) {
-    .top-title .title-left {
-        background-image: url(./pic/webp/melody.webp);;
-    }
-    
-    .thumb {
-        background-image: url(./pic/webp/pink_bg.webp);
-    }
 
     .sub-title .heading {
         margin-bottom: clamp(10rem, 20vw, 35rem);
@@ -290,14 +304,6 @@
 @media (max-width: 620px) {
     .top-title h1 {
         line-height: 1.5em;
-    }
-
-    .top-title .title-left {
-        background-image: url(./pic/webp/melody_mobile.webp);;
-    }
-    
-    .thumb {
-        background-image: url(./pic/webp/pink_bg_mobile.webp);
     }
 
     .sub-title .heading {

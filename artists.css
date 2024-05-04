@@ -46,9 +46,9 @@
 
 .artists .artists-list .artist-image {
    width: 70%;
+   height: 100%;
    margin: 0 15%;
 }
 
 .artists .artists-list .artist .name {
     text-align: center;
-}
