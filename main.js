@@ -1,37 +1,22 @@
-$('.menu-btn').on('click', function() {
-    scrollTop = $(window).scrollTop();
-    is_open_hamburger = !is_open_hamburger;
-    if (is_open_hamburger) {
-        $('body').css({
-        position: 'fixed',
-        top: -scrollTop
-        });
-    } else {
-        $('body').css({
-            position: '',
-            top: ''
-        });
-    }
-});
 
-$(function(){
-	$(window).scroll(function (){
-		var scroll = $(window).scrollTop();
-		var windowHeight = $(window).height();
-        if (scroll > windowHeight * 0.5) {
-            $('.page-top').addClass('top');
-            $('top').fadeIn();
-            console.log("top");
+const scroll_btn = document.querySelector('.page-top');
+
+scroll_btn.addEventListener('click', () => {
+	window.scroll({
+        top: 0,
+        behavior: 'smooth'
+    });
+}, false);
+
+window.addEventListener('scroll', () => {
+		const scroll = window.scrollY;
+		const PageHeight = document.documentElement.scrollHeight;
+        if (scroll > PageHeight * 0.5) {
+            scroll_btn.classList.add('top');
         } else {
-            $('.page-top').removeClass('top');
-            $('top').fadeOut();
+            scroll_btn.classList.remove('top');
         }
-	});
-});
-
-$('.page-top').on('click', function() {
-    $('html, body').animate({scrollTop: 0}, 1000);
-});
+    }, false);
 
 
 // 1秒ごとに実行
@@ -44,9 +29,15 @@ const update = () => {
       Math.floor((diff / 1000 / 60 / 60) % 24),
       Math.floor((diff / 1000 / 60) % 60),
     ];
-    $('.day').html(numbers[0].toString() + "d");
-    $('.hour').html(numbers[1].toString() + "h");
-    $('.min').html(numbers[2].toString() + "m");
+    const day = document.querySelectorAll('.day');
+    const hour = document.querySelectorAll('.hour');
+    const min = document.querySelectorAll('.min');
+
+    for (let i = 0; i < day.length; i++) {
+      day[i].textContent = numbers[0].toString() + "d";
+      hour[i].textContent = numbers[1].toString() + "h";
+      min[i].textContent = numbers[2].toString() + "m";
+    }
 };
 update();
-setInterval(update, 1000);
+setInterval(update, 1000)

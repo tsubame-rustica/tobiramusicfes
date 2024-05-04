@@ -1,3 +1,8 @@
+
+
+
+
+
 .top-title {
     display : flex;
     flex-direction  : row;
@@ -30,7 +35,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: url(./pic/webp/melody.webp);
     background-size: 110%;
     background-repeat: no-repeat;
     background-position: -5vw 33%;
@@ -100,7 +104,6 @@
     justify-content: center;
     width: 100%;
     height: max-content;
-    background-image: url(./pic/webp/pink_bg.webp);
     background-size : 100% auto;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -257,8 +260,11 @@
 }
 
 .sub-title .info {
-    font-weight: 400;
     font-family: 'Oswald';
+}
+
+.sub-title .info h3 {
+    font-weight : 200;
 }
 
 .black-bg {
@@ -268,6 +274,13 @@
 }
 
 @media (min-width: 621px) {
+    .top-title .title-left {
+        background-image: url(./pic/webp/melody.webp);;
+    }
+    
+    .thumb {
+        background-image: url(./pic/webp/pink_bg.webp);
+    }
 
     .sub-title .heading {
         margin-bottom: clamp(10rem, 20vw, 35rem);
@@ -277,6 +290,14 @@
 @media (max-width: 620px) {
     .top-title h1 {
         line-height: 1.5em;
+    }
+
+    .top-title .title-left {
+        background-image: url(./pic/webp/melody_mobile.webp);;
+    }
+    
+    .thumb {
+        background-image: url(./pic/webp/pink_bg_mobile.webp);
     }
 
     .sub-title .heading {

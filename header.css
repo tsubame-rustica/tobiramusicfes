@@ -1,3 +1,15 @@
+@font-face {
+    font-family : 'Noto Sans JP';
+    src : url(./fonts/NotoSansJP-VariableFont_wght-light.ttf);
+    display : swap;
+}
+@font-face {
+    font-family : 'Oswald';
+    src : url(./fonts/Oswald-VariableFont_wght.woff);
+    display : swap;
+}
+
+
 body {
     font-family: 'Oswald', 'Noto Sans JP';
 }
@@ -22,6 +34,7 @@ header {
 
 .logo-outer img {
     width: 80%;
+    height: 100%;
 }
 
 #hamburger-menu {
@@ -293,5 +306,4 @@ input[type="checkbox"]:checked ~ .menu-btn span::after {
         border-top: #000000 3px solid;
         border-left: #000000 3px solid;
         transform: rotate(45deg);
-    }
-}
+  
