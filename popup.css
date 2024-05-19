@@ -1,0 +1,124 @@
+#popup {
+    display: none;
+}
+
+.active {
+    display: block !important;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #3f3f3f8e;
+    z-index: 1000;
+    top: 0;
+}
+
+.active #close-bg {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000;
+    border: none;
+}
+
+.active #popup-inner {
+    display: block ;
+    width: 60%;
+    aspect-ratio: 3 / 2;
+    background-color: #1a1a1a;
+    margin: auto 20%;
+}
+
+.active {
+    animation-name: fadeIn;
+    animation-duration: 0.25s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.popup-content {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.popup-content .popup-close {
+    position: relative;
+    width: max-content;
+    left: 100%;
+    bottom: 5%;
+}
+
+.popup-content .popup-close input {
+    width: 2.5vw;
+    height: 2.5vw;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5vw;
+    text-align: center;
+    cursor: pointer;
+    background-color: #0000;
+}
+
+.popup-content .popup-text {
+    width: 100%;
+    height: 100%;
+    display: grid; 
+    grid-template-columns: 1.2fr 0.8fr 1fr; 
+    grid-template-rows: 0.6fr 1.9fr 0.5fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "a b b"
+        "c b b"
+        "d b b"; 
+}
+
+.popup-text #popup-name {
+    grid-area: a;
+    text-align: left;
+    width: 80%;
+    height: 100%;
+    font-size: 2vw;
+    font-weight: 600;
+    margin: auto;
+}
+
+.popup-text #popup-img {
+    grid-area: b;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.popup-text #popup-text {
+    grid-area: c;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    margin: auto;
+    text-align: left;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+}
+
+
+/* @media (min-width: 768px) {
+    .active #popup-inner {
+        width: 30%;
+        aspect-ratio: 1 / 1;
+        background-color: #2b2b2b;
+        margin: auto 35%;
+    }
+} */

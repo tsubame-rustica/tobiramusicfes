@@ -1,3 +1,6 @@
+
+
+
 .artists {
     width: 100%;
     height: max-content;
@@ -42,13 +45,16 @@
     justify-content: center;
     width: 50%;
     margin-bottom: 10%;
+    cursor: pointer;
 }
 
 .artists .artists-list .artist-image {
    width: 70%;
    height: 100%;
    margin: 0 15%;
+   object-fit: contain;
 }
 
 .artists .artists-list .artist .name {
     text-align: center;
+}

@@ -1,8 +1,3 @@
-
-
-
-
-
 .top-title {
     display : flex;
     flex-direction  : row;
@@ -138,6 +133,9 @@
     background-size: auto 80%;
     background-repeat: no-repeat;
     background-position: center;
+    text-indent:100%;
+	white-space:nowrap;
+	overflow:hidden;
 }
 
 .plaid-bg .stripe {
@@ -297,7 +295,7 @@
     }
     
     .thumb {
-        background-image: url(./pic/webp/pink_bg_mobile.webp);
+        background-image: url(./pic/webp/pink_bg_m.webp);
     }
 
     .sub-title .heading {

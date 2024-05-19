@@ -306,4 +306,5 @@ input[type="checkbox"]:checked ~ .menu-btn span::after {
         border-top: #000000 3px solid;
         border-left: #000000 3px solid;
         transform: rotate(45deg);
-  
+    }
+}
