@@ -41,3 +41,45 @@ const update = () => {
 };
 update();
 setInterval(update, 1000)
+
+
+// addeventlister
+const popup = document.getElementById('popup');
+const pop_name = document.getElementById('popup-name');
+const pop_txt = document.getElementById('popup-text');
+const pop_img = document.getElementById('popup-img');
+const pop_link = document.getElementById('popup-sns-link');
+
+const name_arr = ["ぺんと", "Hiroki", "海舟", "巫てんり"];
+const text_arr = ["ゲームはプロ初心者。しかし音楽は実力派なやさしいミュージシャン。\n白樺のような爽やかな歌声で心の初期スポーンに連れ戻せるか？", 
+                  "人気ゲーム公式の歌ってみたコンテスト最優秀受賞者。\n自身初のメタバースライブで超ハイトーンのトビラを開けるか？", 
+                  "唄って創れるギタリスト。日本のライブハウスを圧巻する超実力派。", 
+                  "VTuberとしては異例の大型スクリーン路上ライブで現実とバーチャルを沸かせた。\nシン・トーキョーから世界へ人類全員なぎっこに変えられるか？"];
+
+const artist1 = document.getElementById('artist1');
+const artist2 = document.getElementById('artist2');
+const artist3 = document.getElementById('artist3');
+const artist4 = document.getElementById('artist4');
+
+artist1.addEventListener('click', () => {
+    popup.classList.add('active');
+    pop_name.innerHTML = name_arr[0];
+    pop_txt.innerHTML = text_arr[0];
+    pop_img.src = "img/artist1.jpg";
+    pop_txt.innerHTML = text_arr[0]
+}, false);
+
+artist1.addEventListener('click', () => {
+    popup.classList.add('active');
+    pop_txt.innerHTML = text_arr[1]
+}, false);
+
+artist1.addEventListener('click', () => {
+    popup.classList.add('active');
+    pop_txt.innerHTML = text_arr[2]
+}, false);
+
+artist1.addEventListener('click', () => {
+    popup.classList.add('active');
+    pop_txt.innerHTML = text_arr[3]
+}, false);

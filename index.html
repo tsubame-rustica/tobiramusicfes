@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="./main.css?ver1.5">
         <link rel="stylesheet" href="./features.css?ver1.2">
         <link rel="stylesheet" href="./artists.css?ver1.0">
+        <link rel="stylesheet" href="./popup.css?ver1.0">
         <link rel="stylesheet" href="./footer.css?ver1.0">
         <link rel="stylesheet" href="./coding-rule.css?ver1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +21,7 @@
     <body>
         <header>
             <div class="logo-outer">
-                <a href="https://tsubame-rustica.github.io/tobiramusicfes/index.html">
+                <a href="https://tobirapolis.com/tmf/index.html">
                     <img src="./pic/webp/tmf_white_logo.webp" alt="TOBIRAMUSICFESのロゴ。白い文字で書かれている" width="730" height="56">
                 </a>
             </div>
@@ -42,7 +43,7 @@
             </div>
             <div class="thumb">
                 <div class="thumb-img">
-                    <img src="./pic/webp/tmf_hq.webp" alt="TOBIRA MUSIC FESTIVALのロゴ" width="754" height="387">
+                    <img src="./pic/webp/tmf_hq_s.webp">
                 </div>
                 <div class="thumb-text">
                     <h3>自宅から参加できる</h3>
@@ -113,20 +114,20 @@
                         <div class="heading-title"><h2>ARTISTS</h2></div>
                     </div>
                     <div class="artists-list">
-                        <div class="artist">
+                        <div class="artist" id="artist1">
                             <img loading="lazy" class="artist-image" src="./pic/webp/Silhouette1_500.webp" alt="出演者のシルエット画像1" width="408" height="481">
                             <div class="name"><h3>近日公開</h3></div>
                         </div>
-                        <div class="artist">
+                        <div class="artist" id="artist2">
                             <img loading="lazy" class="artist-image" src="./pic/webp/Silhouette2_500.webp"alt="出演者のシルエット画像2" width="408" height="481">
                             <div class="name"><h3>近日公開</h3></div>
                         </div>
-                        <div class="artist">
-                            <img loading="lazy" class="artist-image" src="./pic/webp/Silhouette3_500.webp" alt="出演者のシルエット画像3" width="408" height="481">
+                        <div class="artist" id="artist3">
+                            <img loading="lazy" class="artist-image" src="./pic/webp/Silhouette4_500.webp" alt="出演者のシルエット画像3" width="408" height="481">
                             <div class="name"><h3>近日公開</h3></div>
                         </div>
-                        <div class="artist">
-                            <img loading="lazy" class="artist-image" src="./pic/webp/Silhouette4_500.webp" alt="出演者のシルエット画像4" width="408" height="481">
+                        <div class="artist" id="artist4">
+                            <img loading="lazy" class="artist-image" src="./pic/webp/Silhouette3_500.webp" alt="出演者のシルエット画像4" width="408" height="481">
                             <div class="name"><h3>近日公開</h3></div>
                         </div>
                     </div>
@@ -154,6 +155,23 @@
                     <h3>2024.06.22 Sat<br>
                        14:00~18:00</h3>
                 </div>
+            </div>
+            <div id="popup">
+                <button type="button" id="close-bg">
+                    <div id="popup-inner">
+                        <div class="popup-content">
+                            <div class="popup-close">
+                                <input type="button" id="close-btn">
+                            </div>
+                            <div class="popup-text">
+                                <div id="popup-name"></div>
+                                <div id="popup-text"></div>
+                                <div id="popup-img"></div>
+                                <div id="popup-sns-link"></div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
             </div>
         </main>
         <footer>
@@ -220,5 +238,62 @@
         };
         update();
         setInterval(update, 1000);
+
+        // addeventlister
+        const popup = document.getElementById('popup');
+        const pop_name = document.getElementById('popup-name');
+        const pop_txt = document.getElementById('popup-text');
+        const pop_img = document.getElementById('popup-img');
+        const pop_link = document.getElementById('popup-sns-link');
+
+        const name_arr = ["ぺんと", "Hiroki", "海舟", "巫てんり"];
+        const text_arr = ["ゲームはプロ初心者。しかし音楽は実力派なやさしいミュージシャン。\n白樺のような爽やかな歌声で心の初期スポーンに連れ戻せるか。", 
+                        "人気ゲーム公式の歌ってみたコンテスト最優秀受賞者。\n自身初のメタバースライブで超ハイトーンのトビラを開けるか。", 
+                        "唄って創れるギタリスト。日本のライブハウスを圧巻する超実力派。\n文武両道ギタリストはメタバースに平和をもたらせるか。", 
+                        "VTuberとしては異例の大型スクリーン路上ライブで現実とバーチャルを沸かせた。\nシン・トーキョーから世界へ人類全員なぎっこに変えられるか。"];
+
+        const artist1 = document.getElementById('artist1');
+        const artist2 = document.getElementById('artist2');
+        const artist3 = document.getElementById('artist3');
+        const artist4 = document.getElementById('artist4');
+
+        const popup_close_bg = document.getElementById('close-bg');
+        const popup_close_btn = document.getElementById('close-btn');
+
+        artist1.addEventListener('click', () => {
+            pop_img.innerHTML = "<img src='./pic/artists/pento.png' alt='アーティストの画像' width='100%'>";
+            change_info(0);
+        }, false);
+
+        artist2.addEventListener('click', () => {
+            pop_img.innerHTML = "<img src='./pic/artists/hiroki.png' alt='アーティストの画像' width='100%'>";
+            change_info(1);
+        }, false);
+
+        artist3.addEventListener('click', () => {
+            pop_img.innerHTML = "<img src='./pic/artists/kaishu.png' alt='アーティストの画像' width='100%'>";
+            change_info(2);
+        }, false);
+
+        artist4.addEventListener('click', () => {
+            pop_img.innerHTML = "<img src='./pic/artists/tenri.png' alt='アーティストの画像' width='100%'>";
+            change_info(3);
+        }, false);
+
+        function change_info(idx) {
+            popup.classList.add('active');
+            pop_name.innerHTML = name_arr[idx];
+            pop_txt.innerHTML = text_arr[idx];
+            pop_txt.innerHTML = text_arr[idx];
+        }
+
+        popup_close_bg.addEventListener('click', () => {
+            popup.classList.remove('active');
+        }, false);
+
+        popup_close_btn.addEventListener('click', () => {
+            popup.classList.remove('active');
+        }, false);
+        
     </script>
 </html>
