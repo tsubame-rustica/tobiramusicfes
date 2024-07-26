@@ -1,3 +1,17 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .top-title {
     display : flex;
     flex-direction  : row;
@@ -116,14 +130,34 @@
     object-fit: contain;
 }
 
+.thumb-bg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .thumb .thumb-text {
-    height: 40%;
+    height: max-content;
     text-align: center;
     margin-bottom: 15%;
+    width: max-content;
+    padding: 0 10%;
+    color: #F288B9;
+    font-weight: bold;
+    background-image: url(./pic/line_l.svg), url(./pic/line_r.svg);
+    background-size: auto 100%;
+    background-position: left, right;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.thumb-text .text {
+    width: max-content;
 }
 
 .thumb .thumb-text h3 {
-    font-weight: normal;
+    font-weight: 400;
     margin: 0;
 }
 
@@ -133,9 +167,29 @@
     background-size: auto 80%;
     background-repeat: no-repeat;
     background-position: center;
-    text-indent:100%;
-	white-space:nowrap;
-	overflow:hidden;
+}
+
+.how-to-join {
+    position: relative;
+    width: 100%;
+    height: calc(100vw / 3);
+    overflow: hidden;
+}
+
+.how-to-join .bg {
+    width: 100%;
+    height: 100%;
+    perspective: 60vw; /*--perspective--*/
+}
+
+.how-to-join .bg .plaid-bg {
+    position: relative;
+    left: -150%;
+    width: 400%;
+    height: 500%;
+    background: linear-gradient(0deg, #350951, #e4a1c0);
+    transform: perspective(100000px) rotateX(-60deg);
+    transform-origin: top left;
 }
 
 .plaid-bg .stripe {
@@ -161,6 +215,7 @@
     top: 0;
     text-align: center;
     color: #fff;
+    font-size: clamp(0.8rem, calc(0.2rem + 3.025vw), 2.5rem);
     font-weight: bold;
     background-color: #F288B9;
     border-radius: 9999px;
@@ -169,6 +224,16 @@
     margin: 10% 20%;
     padding: 0;
 
+}
+
+.how-to-join .jump-page-button button a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
 }
 
 .countdown {
@@ -254,7 +319,7 @@
 
 .sub-title .heading h1 {
     letter-spacing: 0.25em;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .sub-title .info {
@@ -271,14 +336,52 @@
     background-color: #050505;
 }
 
+.timetable {
+    background-color    : #FFFDE3;
+    padding-bottom: 3em;
+}
+
+.timetable .heading {
+    padding      : 1em;
+    text-align  : center;
+}
+
+.timetable .heading .heading-title h2 {
+    font-weight : 200;
+    
+}
+
+.timetable .table-img {
+    width   : 100%;
+    /*height  : max-content;*/
+}
+
+.timetable .table-img img {
+    width   : 70%;
+    margin  : 0 15%;
+    background-color    : #fff;
+}
+
+.twitter-timeline {
+    width   : 70%;
+    margin  : 0 15%;
+}
+
+.embed-timeline {
+    margin  : 10% 0;
+    width   : 100%;
+    display : flex;
+    justify-content : center;
+}
+
 @media (min-width: 621px) {
     .top-title .title-left {
         background-image: url(./pic/webp/melody.webp);;
     }
     
-    .thumb {
-        background-image: url(./pic/webp/pink_bg.webp);
-    }
+    /*.thumb {*/
+    /*    background-image: url(./pic/webp/pink_bg_2.webp?ver1.0);*/
+    /*}*/
 
     .sub-title .heading {
         margin-bottom: clamp(10rem, 20vw, 35rem);
@@ -294,15 +397,15 @@
         background-image: url(./pic/webp/melody_mobile.webp);;
     }
     
-    .thumb {
-        background-image: url(./pic/webp/pink_bg_m.webp);
-    }
+    /*.thumb {*/
+    /*    background-image: url(./pic/webp/pink_bg_m.webp?ver1.0);*/
+    /*}*/
 
     .sub-title .heading {
         margin-bottom: clamp(4rem, 20vw, 8rem);
     }
 
     .title-top-right .countdown {
-        top: 10vw;
+        top:10vw;
     }
 }

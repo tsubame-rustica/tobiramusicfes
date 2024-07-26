@@ -1,0 +1,78 @@
+.goods {
+    width: 95%;
+    margin-top: 20%;
+    padding: 2.5%;
+}
+
+.goods .heading {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.goods ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.goods-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffffA;
+    overflow: hidden;
+}
+
+.swiper-slider {
+    overflow: hidden;
+}
+.goods ul li img{
+    height: 75%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+.goods ul li .name h6 {
+    text-align: center;
+    padding: 1em 0;
+    font-size: clamp(1rem, 2vw, 2rem) !important;
+}
+
+.swiper-slide {
+    display: none;
+}
+
+.swiper-wrapper {  
+    display: grid ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.1fr 0.9fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "a a a"
+      "b c d";
+}
+
+.swiper-slide-active {
+    grid-area: a;
+    width: 100%;
+}
+
+
+.swiper-slide-stand {
+    width: calc(100% / 3);
+    display: block;
+}
+
+.swiper-slide-next {
+    grid-area: b;
+}
+
+.swiper-slide-next2 {
+    grid-area: c;
+}
+
+.swiper-slide-next3 {
+    grid-area: d;
+}
