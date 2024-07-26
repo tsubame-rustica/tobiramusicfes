@@ -1,0 +1,680 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>イベントレポート公開 - TOBIRA MUSIC FESTIVAL 2024　　　</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8f6be686-40c0-4ba3-b628-a5212b90eb1e" class="page sans"><header><img class="page-cover-image" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/TMF.jpg" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/document_red.svg"/></div><h1 class="page-title">イベントレポート公開 - TOBIRA MUSIC FESTIVAL 2024　　　</h1><p class="page-description"></p></header><div class="page-body"><hr id="9c2ff774-8335-47e3-8554-32d03b0b10b9"/><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="546fac92-e6ef-469d-a5d1-18b88c13021b"><div style="font-size:1.5em"><span class="icon">📃</span></div><div style="width:100%">目次<nav id="7da23214-f53a-40fc-9406-6542bb02c4de" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#019f01a7-7a07-4570-8e87-02b17b1e4595">TOBIRA MUSIC FESTIVAL ~音楽のトビラを開く場所~</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a64cabb9-888e-495d-bbe3-13d10594fe19">出演アーティスト様</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#122c8749-bb9b-4afc-b5a7-a94ea578ab65">14:00 - 会場オープン＠エントランス</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#bffb08f5-1d1e-43bb-8692-bcbd666a25b3">14:30 - Hiroki メタバースライブ ＠スカイビル</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ffc4e037-86d0-4f86-a7b0-d100ef115449">15:10 -  海舟 メタバースライブ ＠ライブハウスTOBIRA1</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#94e24e0f-6572-4120-bbcf-ba4a19cab225">15:50 - ぺんと メタバースライブ @ライブハウスTOBIRA2</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#eb7b7f9d-cbad-469b-a880-b142b7af9398">16:30 - 巫てんり メタバースライブ ＠パーティクルライブステージABCD</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#9a41f6ff-379b-485a-99a2-db9edd5118c9">17:30 - スペシャルアフタートーク ＠エントランス</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#999ca84e-2703-4d8b-99ba-055eb05e0ab0">サブイベントもあったり…？</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1a5029a2-5a23-42b9-bca6-c05a6490d660">あとがき</a></div></nav></div></figure><h2 id="019f01a7-7a07-4570-8e87-02b17b1e4595" class="block-color-pink_background">TOBIRA MUSIC FESTIVAL ~音楽のトビラを開く場所~</h2><hr id="801e5860-12e4-4633-a3c1-b0ec42005066"/><p id="7d66341c-4a68-4c14-ad46-214d512b4a04" class=""><strong>6月22日(土) TOBIRAPOLIS初のメタバース音楽イベントを開催しました！！</strong></p><p id="629917cd-c7dc-4ee2-88e4-ab9825b44a8a" class="">みなさまこんにちは！G1-Δ<mark class="highlight-gray"> </mark>クラスのmilkです。<br/>6月22日(土)に開催された『TOBIRA MUSIC FESTIVA当日のの様子をお伝えします！<br/>この日は1,000人を超える来場者のほか、YouTubeでのライブ配信が再生回数1,000回を超え想像以上の盛り上がりを見せました✨<br/></p><p id="03fbdf25-9af6-472e-94bf-4612661c9b6a" class="">▼当日のダイジェスト映像</p><figure id="001e2e45-8348-4ac8-98b5-92693f803d2c"><div class="source"><a href="https://youtu.be/jOe_g1SpfuA">https://youtu.be/jOe_g1SpfuA</a></div></figure><h3 id="a64cabb9-888e-495d-bbe3-13d10594fe19" class="block-color-pink_background">出演アーティスト様</h3><hr id="1b564864-b71f-4ef1-a8c3-e868f8f487a1"/><p id="c7543c45-40f7-42db-9699-ee3bddadbe6a" class="">こちらの4名のアーティストの方をお招きしてミュージックフェスを行いました。</p><div id="b85327ed-7586-433a-92fc-9ecfafc073e7" class="column-list"><div id="5664194c-2dd8-47bc-bfa6-5396e7bb0383" style="width:100%" class="column"><figure id="7c84a05c-4356-4dc3-adaa-9fd6d2d7ec30" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/Untitled.png"><img style="width:1280px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/Untitled.png"/></a></figure></div><div id="c67c02f0-f677-4d6b-9f6d-5e3f775dd1bb" style="width:100%" class="column"><figure class="callout" style="white-space:pre-wrap;display:flex" id="6dfe0e3c-4cee-4d9f-ad13-7635c6ff75b8"><div style="font-size:1.5em"><img class="icon" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/logo-black.png"/></div><div style="width:100%"><strong><a href="https://x.com/h1rok1music"><span style="border-bottom:0.05em solid">@h1rok1music</span></a></strong></div></figure><figure class="callout" style="white-space:pre-wrap;display:flex" id="cc4c6614-b200-4c16-acf1-e6da7b7e7df3"><div style="font-size:1.5em"><img class="icon" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/%25E5%258B%2595%25E7%2594%25BB%25E5%2586%258D%25E7%2594%259F%25E3%2583%259B%25E3%2582%2599%25E3%2582%25BF%25E3%2583%25B3.png"/></div><div style="width:100%"><strong><a href="https://www.youtube.com/@hirokimusic2933"><span style="border-bottom:0.05em solid">@hirokimusic2933</span></a></strong></div></figure></div></div><div id="8293bcf6-cb54-4aec-899e-23516d1e09fa" class="column-list"><div id="3938bcc0-b021-4add-a874-2f4720db9e41" style="width:50%" class="column"><figure id="7944a708-15f4-416c-b259-cd60586d3773" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/Untitled%201.png"><img style="width:1280px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/Untitled%201.png"/></a></figure></div><div id="7a49a3ce-df98-426b-a799-957f750ad4b6" style="width:50%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="d5806de8-7e75-473a-b750-b96baf368592"><div style="font-size:1.5em"><img class="icon" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/logo-black.png"/></div><div style="width:100%"><strong><a href="https://x.com/Kaisyu_JPN"><span style="border-bottom:0.05em solid">@Kaisyu_JPN</span></a></strong></div></figure><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="4c23397f-6b64-4942-822f-b09bb8828a43"><div style="font-size:1.5em"><img class="icon" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/Instagram_Glyph_Gradient.png"/></div><div style="width:100%"><strong><a href="https://www.instagram.com/seahopp_gram/"><span style="border-bottom:0.05em solid">@seahopp_gram</span></a></strong></div></figure><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="b3b4c960-5912-4861-8ce2-79eacc9ddf41"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/globe_blue.svg"/></div><div style="width:100%"><strong><a href="https://www.tunecore.co.jp/artists/Kaisyu"><span style="border-bottom:0.05em solid">@Kaisyu</span></a></strong></div></figure></div></div><div id="553645b7-7508-4f62-b0d1-6667ac725ff2" class="column-list"><div id="8415ef72-bf55-4d73-9a62-f1e71030ec01" style="width:50%" class="column"><figure id="1a9a79fb-4e0b-4a06-96bf-08bab7e3ce56" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/Untitled%202.png"><img style="width:680.0087280273438px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/Untitled%202.png"/></a></figure></div><div id="95f3081f-96e2-4b43-bd38-6dac372d365c" style="width:50%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="f2b8ecd3-7d03-4d63-af39-4659ed71270f"><div style="font-size:1.5em"><img class="icon" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/logo-black%201.png"/></div><div style="width:100%"><strong><a href="https://x.com/Pentonic005"><span style="border-bottom:0.05em solid">@Pentonic005</span></a></strong></div></figure><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="e136dce7-26ae-4fc4-9329-85afa9f1d320"><div style="font-size:1.5em"><img class="icon" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/%25E5%258B%2595%25E7%2594%25BB%25E5%2586%258D%25E7%2594%259F%25E3%2583%259B%25E3%2582%2599%25E3%2582%25BF%25E3%2583%25B3%201.png"/></div><div style="width:100%"><strong><a href="https://www.youtube.com/@Pentonic_005"><span style="border-bottom:0.05em solid">@Pentonic_005</span></a></strong></div></figure><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="b71a70cf-e141-447c-83c8-a07a3368e51b"><div style="font-size:1.5em"><img class="icon" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/Instagram_Glyph_Gradient%201.png"/></div><div style="width:100%"><strong><a href="https://www.instagram.com/pentonic005/"><span style="border-bottom:0.05em solid">@pentonic005</span></a></strong></div></figure></div></div><div id="855767d5-5e6b-4d9f-95b8-b12066f5adf9" class="column-list"><div id="aef1d7b9-f78a-40d6-9dc9-f23c03bef176" style="width:50%" class="column"><figure id="b531f98c-c84c-406a-8170-292949de02d7" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/Untitled%203.png"><img style="width:1280px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/Untitled%203.png"/></a></figure></div><div id="83126fd5-2114-4e4a-9178-3b1674dd6ec9" style="width:50%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="825d652f-af80-42e3-abe7-20c535e5b606"><div style="font-size:1.5em"><img class="icon" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/logo-black%201.png"/></div><div style="width:100%"><strong><a href="https://x.com/kannagi_tenri"><span style="border-bottom:0.05em solid">＠kannagi_tenri</span></a></strong></div></figure><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="f31b5d81-b1fa-4da2-9932-025c6b924595"><div style="font-size:1.5em"><img class="icon" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/%25E5%258B%2595%25E7%2594%25BB%25E5%2586%258D%25E7%2594%259F%25E3%2583%259B%25E3%2582%2599%25E3%2582%25BF%25E3%2583%25B3%201.png"/></div><div style="width:100%"><strong><a href="https://www.youtube.com/@KannagiTenri"><span style="border-bottom:0.05em solid">@KannagiTenri</span></a></strong></div></figure><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="67c9a4ab-ba27-4f02-aa51-0aff5bfc2315"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/globe_blue.svg"/></div><div style="width:100%"><strong><a href="https://www.kannagitenri-officialhp.com/"><span style="border-bottom:0.05em solid">＠kannagitenri-officialhp</span></a></strong></div></figure></div></div><h3 id="122c8749-bb9b-4afc-b5a7-a94ea578ab65" class="block-color-pink_background">14:00 - 会場オープン＠エントランス</h3><hr id="7d9226fc-80fd-4c53-a3a5-4b23a394d49f"/><p id="08d1da97-9416-4be3-b054-091428ee7549" class="">開場当初からエントランスにはたくさんの来場者が訪れ、グッズコーナーやフェス飯、ファンアート等で楽しんでる様子が見られました。</p><div id="888a1d0c-c41e-4e99-b212-9a5848b2ccf9" class="column-list"><div id="1601acf8-fb99-480d-8d53-ca5382572a20" style="width:50%" class="column"><figure id="9ac9d498-f5a9-4032-88f2-c9e365a80280" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/3f3c91bd-4142-46e2-a94c-79e83d2cf47a.png"><img style="width:2560px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/3f3c91bd-4142-46e2-a94c-79e83d2cf47a.png"/></a><figcaption>▲アーチをくぐって、さあ！いざフェスへ！！</figcaption></figure></div><div id="2b2969b7-fb0d-4afe-a0c8-55657b70afc8" style="width:50%" class="column"><figure id="88850709-37c1-4778-821b-941fa9b0ff3e" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/5e4929cb-9c69-4458-80a5-463f0d23e7d1.png"><img style="width:331px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/5e4929cb-9c69-4458-80a5-463f0d23e7d1.png"/></a><figcaption>▲広場ではグッズとファンアートで大賑わい！</figcaption></figure></div></div><div id="addec9b5-ced0-47ea-a24b-959dcdca8e1c" class="column-list"><div id="392ef33a-0680-44af-979b-648c2e9af8d7" style="width:50%" class="column"><figure id="977c182e-05e9-4cb7-b352-e04022d7a850" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/6b142278-3c72-4ac6-bdcb-b6533be2361d.png"><img style="width:2502px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/6b142278-3c72-4ac6-bdcb-b6533be2361d.png"/></a><figcaption>▲ファンアート書いてくださった皆様ありがとうございました✨立派なFA展になりました🖼️</figcaption></figure></div><div id="9ea0e561-1127-4d7b-88d3-d4e6bfbf5975" style="width:50%" class="column"><figure id="27ae5740-29fd-4114-ac2b-b3084647610a" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/bf74c2d8-e4c5-4dc9-a428-9baa30bff1c5.png"><img style="width:2502px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/bf74c2d8-e4c5-4dc9-a428-9baa30bff1c5.png"/></a><figcaption>▲エントランスでアナウンスをしてくれていたスタッフ！後半には「喉が…」という裏話も…（ほこほこさん）</figcaption></figure></div></div><h3 id="bffb08f5-1d1e-43bb-8692-bcbd666a25b3" class="block-color-pink_background">14:30 - Hiroki メタバースライブ ＠スカイビル</h3><hr id="8cb723d7-7199-4e28-bda5-ef663b0c379a"/><p id="6ea73084-bcb6-4d60-8191-ea26ebcff897" class="">トップバッターを飾るのは、人気ゲーム公式の歌ってみたコンテスト優秀賞受賞者のHirokiさん！<br/>開放感あふれる野外ステージとHirokiさんの力強いハイトーンボイスが奇跡のマッチ！！？<br/></p><div id="57efcb3c-71dd-42aa-90b6-83954a9083e1" class="column-list"><div id="c45b106e-eb73-463a-aba4-4216f088ba4e" style="width:50%" class="column"><figure id="f220e27a-7c1b-4f52-b5ea-785293a2790d" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/f1104294-fab7-4fca-adcf-4786341a2953.png"><img style="width:708px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/f1104294-fab7-4fca-adcf-4786341a2953.png"/></a><figcaption>▲リアルよりリアル？！ド迫力満点の光の野外ステージ！</figcaption></figure></div><div id="6ed8a31d-8dbe-499f-ae19-7c17cdcf4f5a" style="width:50%" class="column"><figure id="8b05fd2e-8493-487d-83b9-434977542d6c" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/fd756a78-f290-4eff-b279-9d3a9faa5d85.png"><img style="width:331px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/fd756a78-f290-4eff-b279-9d3a9faa5d85.png"/></a><figcaption>▲アバターの動きも音楽に合っていて臨場感たっぷりの楽しいステージでした！</figcaption></figure></div></div><div id="f33fe779-d205-4e5e-b7af-d45923ff9f43" class="column-list"><div id="fb3288a2-2840-48f2-9e47-9063d2912f4d" style="width:50%" class="column"><figure id="f75d595f-1935-4c1f-a39a-2d1916fea5e5" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/f7f560d3-1aa8-4638-a2aa-e23b0d740746.png"><img style="width:2502px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/f7f560d3-1aa8-4638-a2aa-e23b0d740746.png"/></a><figcaption>▲クライマックスには花火も上がり大盛り上がりでトップバッターを飾りました！！！</figcaption></figure></div><div id="a7cdf868-2ffa-4cd8-85b5-b8793ee75272" style="width:50%" class="column"><figure id="47e44b54-77cb-44d9-84b8-aeebd9a0b98c" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/3c10ed14-d186-4078-a5c5-1e700cf5af90.png"><img style="width:2502px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/3c10ed14-d186-4078-a5c5-1e700cf5af90.png"/></a><figcaption>▲次のステージへ向かうポータルも大迫力な演出で出現！！</figcaption></figure></div></div><p id="a5f8e9b7-37fc-4b69-9487-80a524d3736a" class="">先頭バッターとして堂々登場したHirokiさん。<br/>一曲目の「ウタカタララバイ」は大人気アニメ映画の劇中歌で会場はHirokiさんの世界に変わり、二曲目の「ケセラセラ」では力強いハイトーンボイスで視聴者を魅了しました。<br/>Hirokiさんの思い入れがあり、自身もずっとライブで歌いたかったという「君の知らない物語」でノスタルジックな雰囲気を創りました。<br/>MCを挟み、なんとHirokiさんが２人に増えました！<br/>メタバースだからこそできる演出で会場は驚きに包まれ、２人のHirokiさんによる「Goodbye Innocence」で会場の熱は最高潮に。<br/>ステージ演出もメタバースだからこそできる大量の花火が打ち上がります。<br/>先頭バッターとして参加者のテンションを一気に持ち上げたパフォーマンスでした。<br/></p><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="8fb4f0d7-c718-4b26-96f2-fe3fe3b55d29"><div style="font-size:1.5em"><span class="icon">🧿</span></div><div style="width:100%"><strong>セットリスト<br/><br/></strong>1. ウタカタララバイ<br/>2. ケセラセラ<br/>3. 君の知らない物語<br/>4. Goodbye Innocence<br/></div></figure><h3 id="ffc4e037-86d0-4f86-a7b0-d100ef115449" class="block-color-pink_background">15:10 -  海舟 メタバースライブ ＠ライブハウスTOBIRA1</h3><hr id="e6bbfce3-e4ef-4f25-921c-006ad2675e53"/><p id="78295b87-58a8-42cc-8587-880ea460573c" class="">真っ白なライブハウスで歌うのは、唄って創れるギタリストの海舟さん！<br/>なんでもTMFが初ライブだったそうです！！<br/>透き通るきれいな歌声と音色で観客ともども忘れられないステージになったのではないでしょうか。<br/></p><div id="a2dc0542-beaf-4abb-a4b6-edcbd3d266c8" class="column-list"><div id="121d5314-7db7-424e-8bbc-77a9cfb9681a" style="width:50%" class="column"><figure id="faba379c-0f42-4588-98f9-e9c54d48871f" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/43cd0059-2999-450e-94c3-ff0ce0cdc5b4.png"><img style="width:708px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/43cd0059-2999-450e-94c3-ff0ce0cdc5b4.png"/></a><figcaption>▲入口までリアル…ライブハウスは地下にあります</figcaption></figure></div><div id="7f145297-2704-4e22-b585-6e8b504d6dc1" style="width:50%" class="column"><figure id="85b32691-8331-4ea8-aaf1-2de692409bb9" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/2960a8b3-9ebf-4f67-98b4-b94830578736.png"><img style="width:2502px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/2960a8b3-9ebf-4f67-98b4-b94830578736.png"/></a><figcaption>▲演出、照明、スケール、どこを見ても本物のライブハウス感！！</figcaption></figure></div></div><div id="998859ea-fd91-49d4-84bb-fac1d47f4344" class="column-list"><div id="0e1150d2-2f2b-41ec-9a59-1e485d044292" style="width:50%" class="column"><figure id="138c5b1b-57b5-41b9-8d67-6dfcc6061845" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/39525dc8-f72f-49a5-bdd6-8dd42426a584.png"><img style="width:331px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/39525dc8-f72f-49a5-bdd6-8dd42426a584.png"/></a><figcaption>▲多くの人が魅了された歌声と音楽💘これはファンになるでしょう！！</figcaption></figure></div><div id="97df58e4-7c64-4d91-b014-ad30de75f6bf" style="width:50%" class="column"><figure id="2e8ba41b-ccdf-4ebc-bc87-d51b64c3dd5b" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/62e78a62-ab73-4bb7-aa55-19376aae14a8.png"><img style="width:331px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/62e78a62-ab73-4bb7-aa55-19376aae14a8.png"/></a><figcaption>▲洗練された真っ白なライブハウス…素敵です✨</figcaption></figure><p id="0bac35e7-0c76-40b2-88d6-47e5fcbd42ab" class="">
+</p></div></div><p id="42a73949-559d-4e71-b4db-a27314068654" class="">シンガーソングライターでギタリストの海舟さん。<br/>一曲目の「kiwi」は、なんと今回のライブのために書いてくださったそうです！<br/>会場内が海舟さんの雰囲気になってきたところで、二曲続けて次の曲が演奏されます。<br/>二曲目の「グレア」は、1stリリースされた曲で海舟さんもかなり思い入れがあり、今日ここでライブできることを楽しみにしていたそうです。<br/>続けて演奏された「まっしろ」はライブハウスTOBIRAのイメージそのもの。<br/>MCでは終始観客とのコミュニケーションを取っていて、ライブハウスは心地よい雰囲気の空間になっていました。最後は「相思草」という曲で締めくくり。<br/>未発表の曲も交え、今回はすべてオリジナル曲の演奏。自身初ライブとしてはかなり多くの人を魅了していったステージでした。<br/></p><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="c5dab154-9ef8-4e1c-b611-383c6e012a78"><div style="font-size:1.5em"><span class="icon">🧿</span></div><div style="width:100%"><strong>セットリスト<br/><br/></strong>1. Kiwi<em><mark class="highlight-gray">- アーティストオリジナル</mark></em><br/>2. グレア <br/><em><mark class="highlight-gray">- アーティストオリジナル</mark></em><br/>3. まっしろ<br/><em><mark class="highlight-gray">- アーティストオリジナル</mark></em><br/>4. 相思草<br/><em> </em><em><mark class="highlight-gray">- アーティストオリジナル</mark></em></div></figure><h3 id="94e24e0f-6572-4120-bbcf-ba4a19cab225" class="block-color-pink_background">15:50 - ぺんと メタバースライブ @ライブハウスTOBIRA2</h3><hr id="27fbf6b7-f98f-494a-8b7a-1dd0a685c247"/><p id="5c3970a1-3aaa-4ee3-82b4-54fb0161421e" class="">雰囲気がガラッと変わったライブハウスでは、ぺんとさんがステージに！<br/>ライブハウスもぺんとさんならではの装飾に変貌していました。<br/></p><div id="390c5c1a-bf9e-4ada-a649-11def41141b9" class="column-list"><div id="e65da54d-386f-4304-ab7d-a89758027cde" style="width:50%" class="column"><figure id="1d5de469-26f6-456c-a424-0422396e85b4" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/df661eea-9334-43ca-abf9-d5ac8f2c3daf.png"><img style="width:2502px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/df661eea-9334-43ca-abf9-d5ac8f2c3daf.png"/></a><figcaption>▲入口もシャボン玉が飛ぶ晴れた日に変わっていました☀️</figcaption></figure></div><div id="5bd27a6e-e13f-44af-ac24-43c21441ee9b" style="width:50%" class="column"><figure id="40647265-da7a-4f47-bf10-4b43800a7144" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/896c51bc-5fdc-48af-9a5c-c6eaf7e2713d.png"><img style="width:708px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/896c51bc-5fdc-48af-9a5c-c6eaf7e2713d.png"/></a><figcaption>▲ゲームの世界に入り込んだようなライブハウス</figcaption></figure></div></div><div id="08caf59f-28a5-43f6-bf4f-755a3f6806ba" class="column-list"><div id="b048dde1-72b3-42f3-ade6-ea44bba40c11" style="width:50%" class="column"><figure id="91f66025-1a2a-4252-b2f9-3bd3e1ae4b5c" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/6be2f8a1-d01b-4a73-8d70-df9613f330a2.png"><img style="width:2502px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/6be2f8a1-d01b-4a73-8d70-df9613f330a2.png"/></a><figcaption>▲オリジナル曲も惜しみなく披露し、会場は熱気に溢れていました！！</figcaption></figure></div><div id="d79fc57b-8b33-421e-b445-7ec736ae7cc8" style="width:50%" class="column"><figure id="8321fead-299a-40f7-8eef-dfcc540ac3dd" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/8680d4b1-53b5-4918-bea4-b89805ec6418.png"><img style="width:331px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/8680d4b1-53b5-4918-bea4-b89805ec6418.png"/></a><figcaption>▲ぺんとさんのイメージカラーで会場は一丸となって盛り上がりを見せました！</figcaption></figure></div></div><p id="3b221e7b-3a82-4877-9fd0-dfa32bb9d3cb" class="">ぺんとさんはゲーム実況もしているため、そのゲームの世界観を表現したステージでパフォーマンスが行われました。<br/>開演すると、ぺんとさんの歌ってみたチャンネルで最も再生回数が多い人気カバー「怪獣の花唄」で会場は一気に盛り上がります。<br/>二曲目の「ハローアオハル」では曲名通り青春を感じるステージ演出で爽やかな空気になりました。続けて始まった三曲目「天体観測」はぺんとさんの青春時代の曲だそう。<br/>最後は自身の1stシングル「花鳥風月」で、会場はぺんとさんのテーマカラーの緑色のペンライトで埋まり、心温まるステージでした。<br/></p><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="125b889e-2880-4855-ae4d-349443dca62c"><div style="font-size:1.5em"><span class="icon">🧿</span></div><div style="width:100%"><strong>セットリスト<br/><br/></strong>1. 怪獣の花唄<br/>2. ハローアオハル <br/><em><mark class="highlight-gray">- アーティストオリジナル</mark></em><br/>3. 天体観測<br/>4. 花鳥風月 <br/><em><mark class="highlight-gray">- アーティストオリジナル</mark></em></div></figure><h3 id="eb7b7f9d-cbad-469b-a880-b142b7af9398" class="block-color-pink_background">16:30 - 巫てんり メタバースライブ ＠パーティクルライブステージABCD</h3><hr id="9089cc4d-6f01-4a57-9daa-6ce5d9caae43"/><p id="c30d659b-63fc-41fe-8607-e7f65797f569" class="">ラストを飾ったのはシントーキョーから現れた圧倒的歌唱力の持ち主、巫てんりさんです！<br/>パーティクルライブステージは空間すべてがステージそのもの！<br/>一瞬で会場が変わったり、目の前に何かが現れたり、メタバースならではの仕掛けがたくさん盛り込まれていました！！<br/></p><div id="5969f77c-d5e8-488d-bd7b-1783ce627f81" class="column-list"><div id="f9ffa6ef-d217-4505-ba84-d0a5934668d1" style="width:50%" class="column"><figure id="ab770b39-23c3-45ff-9a2b-ea657bb072d2" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/d3c3d818-fc8e-40b3-bc9c-0568a50c81e2.png"><img style="width:331px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/d3c3d818-fc8e-40b3-bc9c-0568a50c81e2.png"/></a><figcaption>▲一瞬で会場が変わる仕掛けは驚きでした！教室、屋上、体育館、プール…次から次へと飛んで楽しい！！</figcaption></figure></div><div id="54f23c87-840a-4f63-923b-47d3bd54f892" style="width:50%" class="column"><figure id="9f346b8d-fe8b-44db-afcf-6651bba9364a" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/71fb034d-f067-47f4-b9d9-dd6741991ba4.png"><img style="width:2502px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/71fb034d-f067-47f4-b9d9-dd6741991ba4.png"/></a><figcaption>▲原作アニメが巫てんりさんになってる？！<br/>黒板のイラストの遊び心がおもしろすぎました！！<br/></figcaption></figure></div></div><div id="6d68117e-4e1d-45dd-965a-cc774fa1d6ff" class="column-list"><div id="7ce2a629-05b0-44d1-9863-8a1877ad913c" style="width:50%" class="column"><figure id="cec7d15d-5e9b-4715-ba40-f0c89440b54e" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/a7edc5bc-1ded-4600-bc0a-9e50a4a431d0.png"><img style="width:331px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/a7edc5bc-1ded-4600-bc0a-9e50a4a431d0.png"/></a><figcaption>▲大きな劇場でのステージ！てんりさんが輝いて見えます✨</figcaption></figure></div><div id="e51c670d-c4f3-4e20-8326-380cd9f43750" style="width:50%" class="column"><figure id="c1a27ecf-963d-492a-ade2-ffa757fce1ca" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/d9fb8b68-e7ce-489d-8313-f8833c82f95d.png"><img style="width:331px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/d9fb8b68-e7ce-489d-8313-f8833c82f95d.png"/></a><figcaption>▲光のパーティクルが会場を包みとっっってもきれいでした！！！曲調もかわいくてぴったりな演出！</figcaption></figure></div></div><div id="32637911-f258-4ba0-b336-6eb38e5bcc26" class="column-list"><div id="cdfb287a-a32a-4c28-b71d-cf7b6e53d17c" style="width:50%" class="column"><figure id="9d847d02-5d55-42c0-aedb-d57cd2d97d15" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/c0f8b14c-e61b-4762-a5db-de6acc0bba62.png"><img style="width:2502px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/c0f8b14c-e61b-4762-a5db-de6acc0bba62.png"/></a><figcaption>▲お皿の上で踊ってるてんりさんがかわいぃぃ！！絵本の中のような世界観もさらにかわいさを強調していました💕</figcaption></figure></div><div id="61d3283a-427b-4ce1-9be4-d66b00a0fc68" style="width:50%" class="column"><figure id="4ff8bdc5-964a-4eb8-bc08-bb466d51a26b" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/1441c23a-a497-4082-b4f7-c727aff11e65.png"><img style="width:2502px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/1441c23a-a497-4082-b4f7-c727aff11e65.png"/></a><figcaption>▲最後までしっかり盛り上がって観客みんななぎっこになってしまったか？！</figcaption></figure></div></div><p id="85221b58-4871-41b2-adc4-dea9fffc723a" class="">今回の大トリを務める巫てんりさんは、一曲目「God knows…」は、曲の本家アニメを彷彿させる学校教室のステージから始まりました。<br/>巫てんりさんのステージはパーティクルライブになっており、曲中にステージ演出が大きく変わるメタバースライブらしいパフォーマンスです。<br/>二曲目「シュガーソングとビターステップ」は劇場を模したステージで、歌詞も浮かび上がる演出で大きく盛り上がりました。<br/>ステージを移動し三曲目「妄想感傷代償連盟」はご自身のYouTubeチャンネルで最も再生回数が多いカバー曲です。ステージも本家MVをイメージしており、リスペクトが込められた演出でした。<br/>最後はアップテンポな「ロキ」で会場の盛り上がりは最高潮になり、メタバース音楽ライブは幕を下ろしました。<br/></p><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="93f57362-219a-4493-af0d-b80f99bb2e4c"><div style="font-size:1.5em"><span class="icon">🧿</span></div><div style="width:100%"><strong>セットリスト<br/><br/></strong>1. God knows…<br/>2. シュガーソングとビターステップ<br/>3. 妄想感傷代償連盟<br/>4. ロキ<br/></div></figure><h3 id="9a41f6ff-379b-485a-99a2-db9edd5118c9" class="block-color-pink_background">17:30 - スペシャルアフタートーク ＠エントランス</h3><hr id="bc8740a2-9134-46e1-afb5-d65b34a5e789"/><p id="d8e450b9-a159-488a-b16a-b132f687cfc1" class="">さあ、最後はエントランスに戻ってまいりましてアフタートークのお時間です！<br/>ステージにはイベントを盛り上げてくれたアーティスト4名が立ち、ぺんとさんの進行でいろいろなお話を披露してくれました。<br/></p><figure id="792c460a-3e75-47d6-94d4-8fb8d1890ff9" class="image" style="text-align:left"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/fe6d3adf-5a8e-4220-9ae4-9648d9df7fa1.png"><img style="width:720px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/fe6d3adf-5a8e-4220-9ae4-9648d9df7fa1.png"/></a></figure><h3 id="999ca84e-2703-4d8b-99ba-055eb05e0ab0" class="block-color-pink_background">サブイベントもあったり…？</h3><hr id="282fb61e-cddc-4823-ad18-dc2caa7425fc"/><p id="93751a62-fa87-491a-bb82-a9516e97ca54" class="">っと、ここまでで当日のレポートは終わりなんですがもう一つお話ししたいことが…<br/>SNSでは広告していましたが、実はサブイベントも行っていました。<br/>当日撮った写真でフォトコンテスト📸なんとAmazonギフト5,000円分が当たります！<br/>見事最優秀賞に輝いたのはふぁど様🥇おめでとうございます🎊<br/></p><p id="2b77906d-b151-4137-9d5a-9fafb2c88fcb" class="">審査員から一言📸<br/>バーチャル空間だからこそできる花火演出と分身がメタバースライブらしさを感じました。 写真の華やかさや観客の個性なども相まって100点満点です！<br/></p><div id="599350e5-e3d4-4f13-8dc7-0101ceb071e0" class="column-list"><div id="ee9149a8-d8d2-47b9-8327-ece08a5cf120" style="width:50.000000000000014%" class="column"><figure id="77542c2d-8902-4737-bf6e-a6edcc79cd75" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/804ed70880e0102f.jpg"><img style="width:1240px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/804ed70880e0102f.jpg"/></a></figure></div><div id="3b16fcd1-83f9-4449-8625-a2981da17530" style="width:50%" class="column"><figure id="9c4d14d6-2aa6-4096-9fe0-ae9182dab4cb" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/5.png"><img style="width:331px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/5.png"/></a><figcaption>最優秀賞作品　ふぁど様</figcaption></figure><p id="c2dd1827-304a-4b76-94c7-768831d5d3c0" class="">
+</p><figure id="02ef60d7-2e3b-43f7-9d5f-c0db9d21976e" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/13d5983c46740017.png"><img style="width:331px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/13d5983c46740017.png"/></a></figure></div></div><p id="a4dd2992-02c3-4720-b72c-f657744d7d3b" class="">また今後もこういったイベントがあったときにはたくさんのご応募お待ちしております～！</p><h3 id="1a5029a2-5a23-42b9-bca6-c05a6490d660" class="block-color-pink_background">あとがき</h3><hr id="9aaaf6bf-2dc8-4a84-860f-59d4e370c164"/><p id="cbd41f42-a9c9-4285-97d5-dd8ec1ec8e02" class="">当日のイベントレポートは以上になります。<br/>本イベントに際しましてご協力いただいたアーティストの皆様、ご来場いただいた皆様、本当にありがとうございました！<br/><br/>さて、大盛況だったこのイベントですが、企画・制作した私たちはプロでも専門家でもありません。もちろん、苦労や血の滲むような努力（…？？）もあり、おもしろおかしいハプニングありの数か月間でした。<br/><br/></p><p id="b5508173-8917-4dfc-b3c0-be3cf0b8483f" class=""><strong>次回！！</strong>そんな企画部内の裏話を開発陣へのインタビューとして皆様にお届けします。<br/>どんなエピソードがあるのか、今から楽しみです✨<br/><br/>これを機にトビラポリスイベント企画部入ってみてはいかがでしょう🎊<br/></p><figure id="9e310a01-2ee3-4f5d-9745-1afdfde6e7ca" class="image"><a href="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/x-thx.jpg"><img style="width:720px" src="%E3%82%A4%E3%83%98%E3%82%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9B%E3%82%9A%E3%83%BC%E3%83%88%E5%85%AC%E9%96%8B%20-%20TOBIRA%20MUSIC%20FESTIVAL%202024%208f6be68640c04ba3b628a5212b90eb1e/x-thx.jpg"/></a></figure><p id="fd844e64-fe44-4dc7-8539-4512ec0b4c52" class=""><mark class="highlight-gray">この記事を書いた人: TOBIRAPOLISイベント企画部 milk（1-Δ）</mark></p><p id="eb61398f-9aee-4926-b1ce-60c5c14b2c05" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

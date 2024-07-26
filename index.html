@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="ja">
     <head>
         <link rel="preload" href="./pic/webp/tmf_hq.webp" as="image">
-        <link rel="stylesheet" href="./header.css?ver1.6">
-        <link rel="stylesheet" href="./main.css?ver1.5">
+        <link rel="stylesheet" href="./header.css?ver12.0">
+        <link rel="stylesheet" href="./main.css?ver16.1">
         <link rel="stylesheet" href="./features.css?ver1.2">
         <link rel="stylesheet" href="./artists.css?ver1.0">
         <link rel="stylesheet" href="./popup.css?ver1.0">
@@ -21,36 +23,43 @@
     <body>
         <header>
             <div class="logo-outer">
-                <a href="https://tobirapolis.com/tmf/index.html">
+                <a href="https://tobirapolis.com/tmf/">
                     <img src="./pic/webp/tmf_white_logo.webp" alt="TOBIRAMUSICFESのロゴ。白い文字で書かれている" width="730" height="56">
                 </a>
             </div>
+            <input type="checkbox" id="hamburger-menu">
+            <label for="hamburger-menu" class="menu-btn"><span></span></label>
+            <nav>
+                <ul class="header">
+                    <li><a href="https://tobirapolis.com/tmf/index.html">HOME</a></li>
+                    <li><a href="https://tobirapolis.com/tmf/credit.html">CREDIT</a></li>
+                    <li><a href="https://tobirapolis.com/tmf/report/event-report.html">EVENT REPORT</a></li>
+                </ul>
+            </nav>
         </header>
         <main>
             <div class="top-title">
-                <div class="title-left"><div class="text"><h1>音楽の</h1><h1>トビラを</h1><h1>開く場所</h1></div></div>
-                <div class="title-center"><div class="door-circle-parent"><div class="door-circle"></div></div><div class="door-bg"></div></div>
-                <div class="title-right"><div class="text"><h2>Sat</h2><h2>2024</h2><h2>0622</h2></div></div>
-                <div class="title-top-right">
-                    <div class="countdown">
-                        <div class="text"><h3>開催まで</h3></div><div class="time">
-                            <h1 class="day"></h1>
-                            <h1 class="hour"></h1>
-                            <h1 class="min"></h1>
-                        </div>
-                    </div>
-                </div>
+                <img src=./pic/x-thx.jpg>
             </div>
             <div class="thumb">
                 <div class="thumb-img">
                     <img src="./pic/webp/tmf_hq_s.webp">
                 </div>
-                <div class="thumb-text">
-                    <h3>自宅から参加できる</h3>
-                    <h3>メタバースの音楽イベント</h3>
-                    <h3 class="tmf_logo">TOBIRA MUSIC FESTIVAL</h3>
-                    <h3>開催決定</h3>
+                <div class="thumb-bg">
+                    <div class="thumb-text">
+                        <div class="text">
+                            <h3>自宅から参加できる</h3>
+                            <h3>メタバースの音楽イベント</h3>
+                            <h3 style="font-family:MPLUS2">TOBIRA MUSIC FESTIVAL</h3>
+                            <h3>開催決定</h3>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="digest">
+                <h3>ダイジェスト動画</h3>
+                <iframe src="https://www.youtube.com/embed/jOe_g1SpfuA?si=3vZt1NVxMaAW17Fw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h4>スタッフクレジットは<a href="https://tobirapolis.com/tmf/credit.html">こちら</a>から</h4>
             </div>
             <div class="features">
                 <ul class="features-list">
@@ -115,33 +124,42 @@
                     </div>
                     <div class="artists-list">
                         <div class="artist" id="artist1">
-                            <img loading="lazy" class="artist-image" src="./pic/webp/Silhouette1_500.webp" alt="出演者のシルエット画像1" width="408" height="481">
-                            <div class="name"><h3>近日公開</h3></div>
+                            <img loading="lazy" class="artist-image" src="./pic/artists/pento.png" alt="出演者の画像1" width="408" height="481">
+                            <div class="name"><h3>ぺんと</h3></div>
                         </div>
                         <div class="artist" id="artist2">
-                            <img loading="lazy" class="artist-image" src="./pic/webp/Silhouette2_500.webp"alt="出演者のシルエット画像2" width="408" height="481">
-                            <div class="name"><h3>近日公開</h3></div>
+                            <img loading="lazy" class="artist-image" src="./pic/artists/hiroki.png" alt="出演者の画像2" width="408" height="481">
+                            <div class="name"><h3>Hiroki</h3></div>
                         </div>
                         <div class="artist" id="artist3">
-                            <img loading="lazy" class="artist-image" src="./pic/webp/Silhouette4_500.webp" alt="出演者のシルエット画像3" width="408" height="481">
-                            <div class="name"><h3>近日公開</h3></div>
+                            <img loading="lazy" class="artist-image" src="./pic/artists/kaishu.png" alt="出演者の画像3" width="408" height="481">
+                            <div class="name"><h3>海舟</h3></div>
                         </div>
                         <div class="artist" id="artist4">
-                            <img loading="lazy" class="artist-image" src="./pic/webp/Silhouette3_500.webp" alt="出演者のシルエット画像4" width="408" height="481">
-                            <div class="name"><h3>近日公開</h3></div>
+                            <img loading="lazy" class="artist-image" src="./pic/artists/tenri.png" alt="出演者の画像4" width="408" height="481">
+                            <div class="name"><h3>巫てんり</h3></div>
                         </div>
                     </div>
                 </div>
-                <div class="countdown">
-                    <div class="text">
-                        <h3>開催まで</h3>
-                    </div>
-                    <div class="time">
-                        <h1 class="day"></h1>
-                        <h1 class="hour"></h1>
-                        <h1 class="min"></h1>
+            </div>
+            <div class="how-to-join">
+                <div class="bg">
+                    <div class="plaid-bg">
+                        <div class="stripe"></div>
+                        <div class="border"></div>
                     </div>
                 </div>
+                <div class="jump-page-button">
+                    <a href="https://help.cluster.mu/hc/ja/articles/115000826812-アプリケーションのダウンロード" target="_blank">
+                        <button type="button">
+                            メタバースアプリ<br>
+                            クラスターの使い方
+                        </button>   
+                    </a>
+                </div>
+            </div>
+            <div class="join-step">
+                <img src="./pic/3step.jpg">
             </div>
             <div class="sub-title">
                 <div class="logo">
@@ -168,11 +186,11 @@
                                 <div id="popup-text"></div>
                                 <div id="popup-img"></div>
                                 <div id="popup-sns-link">
-                                    <ul>
-                                        <li><a href=""><img src="./pic/logo/video_player.svg" alt="動画再生ボタン"></a></li>
-                                        <li><a href=""><img src="./pic/webp/logo-white.webp" alt="twitterのロゴ"></a></li>
-                                        <li><a href=""><img src="./pic/logo/insta_wt_logo.svg" alt="instagramのロゴ"></a></li>
-                                        <li><a href=""><img src="./pic/logo/web_120072.svg" alt="webのロゴ" id="web-logo"></a></li>
+                                    <ul id="sns-link">
+                                        <li id="link-1"></li>
+                                        <li id="link-2"></li>
+                                        <li id="link-3"></li>
+                                        <li id="link-4"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -200,64 +218,25 @@
             </div>
             <p class="copy-right">©2024 TOBIRAPOLIS, トビラポリスイベント企画部</p>
         </footer>
-        <div class="page-top"><button type="button"></button></div>
+        <!--<div class="page-top"><button type="button"></button></div>-->
     </body>
     <script>
-        const scroll_btn = document.querySelector('.page-top');
-
-        scroll_btn.addEventListener('click', () => {
-        	window.scroll({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }, false);
-        
-        window.addEventListener('scroll', () => {
-        		const scroll = window.scrollY;
-        		const PageHeight = document.documentElement.scrollHeight;
-                if (scroll > PageHeight * 0.5) {
-                    scroll_btn.classList.add('top');
-                } else {
-                    scroll_btn.classList.remove('top');
-                }
-            }, false);
-        
-        
-        // 1秒ごとに実行
-        const update = () => {
-            // 日本時間の timezone 付きで指定
-            const targetTime = new Date('2024-06-22T14:00+09:00').getTime();
-            const diff = targetTime - Date.now();
-            const numbers = [
-              Math.floor(diff / 1000 / 60 / 60 / 24),
-              Math.floor((diff / 1000 / 60 / 60) % 24),
-              Math.floor((diff / 1000 / 60) % 60),
-            ];
-            const day = document.querySelectorAll('.day');
-            const hour = document.querySelectorAll('.hour');
-            const min = document.querySelectorAll('.min');
-        
-            for (let i = 0; i < day.length; i++) {
-              day[i].textContent = numbers[0].toString() + "d";
-              hour[i].textContent = numbers[1].toString() + "h";
-              min[i].textContent = numbers[2].toString() + "m";
-            }
-        };
-        update();
-        setInterval(update, 1000);
-
         // addeventlister
         const popup = document.getElementById('popup');
         const pop_name = document.getElementById('popup-name');
         const pop_txt = document.getElementById('popup-text');
         const pop_img = document.getElementById('popup-img');
-        const pop_link = document.getElementById('popup-sns-link');
 
         const name_arr = ["ぺんと", "Hiroki", "海舟", "巫てんり"];
         const text_arr = ["ゲームはプロ初心者。しかし音楽は実力派なやさしいミュージシャン。\n白樺のような爽やかな歌声で心の初期スポーンに連れ戻せるか。", 
                         "人気ゲーム公式の歌ってみたコンテスト最優秀受賞者。\n自身初のメタバースライブで超ハイトーンのトビラを開けるか。", 
                         "唄って創れるギタリスト。日本のライブハウスを圧巻する超実力派。\n文武両道ギタリストはメタバースに平和をもたらせるか。", 
                         "VTuberとしては異例の大型スクリーン路上ライブで現実とバーチャルを沸かせた。\nシン・トーキョーから世界へ人類全員なぎっこに変えられるか。"];
+        const link_arr = [["https://www.youtube.com/@Pentonic_005", "https://x.com/Pentonic005", "https://www.instagram.com/pentonic005/", ""], 
+                          ["https://www.youtube.com/@hirokimusic2933", "https://x.com/h1rok1music", "", ""], 
+                          ["", "https://x.com/Kaisyu_JPN", "https://www.instagram.com/seahopp_gram", "https://linkco.re/fv4pya45"],
+                          ["https://www.youtube.com/@KannagiTenri", "https://x.com/kannagi_tenri", "", "https://www.kannagitenri-officialhp.com/"]]
+        const logo_path = ["./pic/logo/video_player.svg", "./pic/webp/logo-white.webp", "./pic/logo/insta_wt_logo.svg", "./pic/logo/web_120072.svg"]
 
         const artist1 = document.getElementById('artist1');
         const artist2 = document.getElementById('artist2');
@@ -270,21 +249,25 @@
         artist1.addEventListener('click', () => {
             pop_img.innerHTML = "<img src='./pic/artists/pento.png' alt='アーティストの画像' width='100%'>";
             change_info(0);
+            console.log("click");
         }, false);
 
         artist2.addEventListener('click', () => {
             pop_img.innerHTML = "<img src='./pic/artists/hiroki.png' alt='アーティストの画像' width='100%'>";
             change_info(1);
+            console.log("click");
         }, false);
 
         artist3.addEventListener('click', () => {
             pop_img.innerHTML = "<img src='./pic/artists/kaishu.png' alt='アーティストの画像' width='100%'>";
             change_info(2);
+            console.log("click");
         }, false);
 
         artist4.addEventListener('click', () => {
             pop_img.innerHTML = "<img src='./pic/artists/tenri.png' alt='アーティストの画像' width='100%'>";
             change_info(3);
+            console.log("click");
         }, false);
 
         function change_info(idx) {
@@ -292,6 +275,15 @@
             pop_name.innerHTML = name_arr[idx];
             pop_txt.innerHTML = text_arr[idx];
             pop_txt.innerHTML = text_arr[idx];
+            for (let i = 0; i < link_arr[idx].length; i++) {
+                var pop_link = document.getElementById('link-' + (i + 1));
+                if (link_arr[idx][i] != "") {
+                    pop_link.innerHTML = "<a href='" + link_arr[idx][i] + "'><img src='" + logo_path[i] + "' alt='SNSのロゴ'></a>";
+                    pop_link.style.display = "block";
+                } else {
+                    pop_link.style.display = "none";
+                }
+            }
         }
 
         popup_close_bg.addEventListener('click', () => {
@@ -304,3 +296,22 @@
         
     </script>
 </html>
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
