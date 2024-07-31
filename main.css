@@ -273,6 +273,10 @@ button {
     color: #A9BF45;
 }
 
+.title-top-right .countdown .text{
+    text-align: right;
+}
+
 .title-top-right .countdown {
     position: absolute;
     width: max-content;
@@ -281,6 +285,7 @@ button {
     top: 11vh;
     background-color: #0000;
 }
+
 
 .title-top-right .countdown .time {
     justify-content: right;
